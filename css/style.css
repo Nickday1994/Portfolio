@@ -130,6 +130,7 @@ header{
 	margin: 0;
 	font-size: 22px;
 	font-style: italic;
+	text-align: center;
 
 }
 .header-main-text p::before{
@@ -422,3 +423,5 @@ footer{
 /*
 font-family: 'PT Sans', sans-serif;
 */
+@media (max-width : 1080px ){
+}
