@@ -230,12 +230,51 @@ header{
 }
 .site-item:hover {
 	transform: scale(1.1);
+	box-shadow: 0 0 25px  #c4c4c4;
 }
 
 .site-item:hover p{
 	bottom: 10px;
 	opacity: 1;
 }
+               /*СТИЛИ ФОРМЫ*/
+.form form{
+	margin: 100px auto 50px auto;
+	padding: 20px;
+ 	width: 500px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	border: 1px solid #c4c4c4;
+	border-radius: 10px;
+}
+
+.form form .UserInfo{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+                          /*КОНЕЦ ФОРМЫ*/
 
                          /*КОНЕЦ КОНТЕНТА*/
                          /*НАЧАЛО ФУТЕРА*/
