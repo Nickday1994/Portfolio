@@ -23,10 +23,12 @@ font-style: normal;
 	box-sizing: border-box;
 }
 body{
+
 	padding: 0;
 	margin: 0;
 }
 header{
+	position: relative;
 	padding: 0;
 	margin: 0;
 	margin-top: -15px;
@@ -93,6 +95,7 @@ header{
 .nav li{
 	padding: 50px 13px 10px 13px;
 	transition: 0.1s ;
+
 }
 
 .nav li:hover {
@@ -134,6 +137,98 @@ header{
 	height: 2px;
 	background-color: #000;
 }
+
+.mobile-menu-wrapper{
+	position: fixed;
+	top:0;
+	right:0;
+	width: 50%;
+	z-index: 10;
+	background-color: rgba(0,0,0,0.6);
+	transform: translateX(100%);
+	transition: 0.5s ease-in-out;
+	
+}
+
+
+
+.mobile-menu-wrapper  .btn-close::after{
+	position: absolute;
+		top: 20px;
+		left: 10px;
+	content: "";
+	width:20px;
+	height: 2px;
+	background-color: #fff;
+	transform: rotate(45deg);
+	transform-origin: 50% 50%;
+
+}
+
+.mobile-menu-wrapper  .btn-close::before{
+	position: absolute;
+		top: 20px;
+		left: 10px;
+	content: "";
+	width:20px;
+	height: 2px;
+	background-color: #fff;
+	transform: rotate(-45deg);
+	transform-origin: 50% 50%;
+}
+
+.active{
+	transform: translateX(0);
+}
+
+.mobile-nav{
+	position: relative;
+	padding: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: space-around;
+	-ms-align-items: center;
+	align-items: center;
+	list-style: none;
+
+}
+
+.mobile-nav li{
+	width: 100%;
+	padding: 10px 20px;
+	margin: 20px 0;
+	text-align:center;
+	transition: 0.1s;
+}
+
+.mobile-nav a{
+	font-family: 'Helvetica LT Std Condensed Light';
+	font-size: 17px;
+	color:white;
+	text-decoration: none;
+	text-transform: uppercase;
+
+}
+
+.mobile-nav li:hover{
+	background-color: rgba(255,255,255,0.2);
+	
+}
+
+
+
+
 
 .header-main-text{
 	position: relative;
@@ -580,6 +675,10 @@ footer{
 	.footer-rightside{
 	width: 300px;
 	margin-left: 20px;
+	}
+
+	.active{
+		display: none;
 	}
 
 
