@@ -94,13 +94,14 @@ header{
 }
 .nav li{
 	padding: 50px 13px 10px 13px;
-	transition: 0.1s ;
+	transition: 0.2s ;
 
 }
 
 .nav li:hover {
 	background-color:#d45e5e;
 	color: #fff;
+	clip-path: polygon(0 0%, 100% 0%, 100% 100%, 60% 100%,50% 90%, 40% 100%, 0% 100%);
 }
 
 .button-hamb{
