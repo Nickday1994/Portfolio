@@ -301,38 +301,131 @@ header{
 	position: relative;
 	min-width: 220px;
 	min-height: 220px;
-	background-color:#55e5a8;
 	border-radius: 3px;
 	margin-bottom: 20px;
-	transition: 0.3s ease;
+	border-radius: 5px;
+	perspective: 1000px;
 
 }
 
-.site-item a img{
+.front, .back{
+	width: 100%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	position:absolute;
+	top:0;
+	left:0;
+	backface-visibility: hidden;
+	border-radius: 5px;
+	transition: 0.6s ease-in;
+
+} 
+
+.back{
+	padding: 10px;
+	transform: rotateY(180deg);
+	background-color:#d45e5e;
+	color: #fff;
+}
+
+
+
+.front h3, .back h3,.front p, .back p{
+	margin: 0;
+	padding: 0;
+}
+
+.front a{
+	display: block;
 	width: 100%;
 	height: 100%;
 }
-.site-item a p{
- padding: 0;
- margin: 0;
- position: absolute;
- overflow: hidden;
- left: 10px;
- bottom: 0px;
- color: #fff;
- font-size: 16px;
- opacity: 0;
- transition: 0.3s ease;
-}
-.site-item:hover {
-	transform: scale(1.1);
-	box-shadow: 0 0 25px  #c4c4c4;
+
+.front a img{
+	width: 100%;
+	border-radius: 5px;
 }
 
-.site-item:hover p{
-	bottom: 10px;
-	opacity: 1;
+.back h3{
+	font-size: 20px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	font-family:'PT Sans', sans-serif;
+
 }
+
+.back p{
+	text-align: center;
+}
+
+.site-item:hover .front{
+	transform: rotateY(180deg);
+}
+
+.site-item:hover .back{
+	transform: rotateY(360deg);
+}
+
+.btn-open{
+	position: relative;
+	margin-top: 15px;
+	border: 1px solid white ;
+	padding: 6px 20px;
+	cursor: pointer;
+	background-color: transparent;
+	color: #fff;
+}
+
+.btn-open a{
+  display:block;
+  text-decoration: none;
+  color:#fff;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1)
+}
+
+.btn-open::before{
+  position: absolute;
+  top:0;
+  right:0; 
+  content:"";
+  width:0%;
+  height:100%;
+  background-color: #fff;
+  z-index:-1;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1)
+  
+}
+
+
+.btn-open:hover::before{
+  left: 0;
+  right: auto;
+  width:  100%;
+}
+
+.btn-open:hover a{
+  z-index: 1;
+  color: #000;
+}
+
+
+
+
+
+
                /*СТИЛИ ФОРМЫ*/
 .form form{
 	margin: 100px auto 50px auto;
